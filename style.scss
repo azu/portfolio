@@ -1,0 +1,94 @@
+@mixin clearfix {
+    zoom: 1;
+
+    &:before,
+    &:after {
+        display: block;
+        height: 0;
+        visibility: hidden;
+        content: "\0020";
+    }
+    &:after {
+        clear: both;
+    }
+}
+@mixin stripe($width, $s_rgba, $e_rgba){
+    background-repeat:  no-repeat;
+    -webkit-background-size:$width;
+    -moz-background-size:$width;
+    -o-background-size:$width;
+    background-size:$width;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, $s_rgba), to($e_rgba));
+    background-image: -moz-linear-gradient(top , $s_rgba, $e_rgba);
+    background-image: -o-linear-gradient(top , $s_rgba, $e_rgba);
+    background-image: linear-gradient(top , $s_rgba, $e_rgba);
+
+}
+@mixin shadow($color: #333333) {
+  -moz-box-shadow: 0px 1px 2px $color;
+  -webkit-box-shadow: 0px 1px 2px $color;
+  box-shadow: 0px 1px 2px $color;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color');
+}
+$site-width : 950px;
+$site-aisde-width : 200px;
+$seperate-color: #eee;
+$spacer : 10px;
+html,body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    margin: 0 auto;
+    @include stripe(100% ,rgba(blue, 0.3), rgba(blue, 0));
+}
+#page{
+    width: $site-width;
+    margin: 0 auto;
+    height:100%;
+    padding:0 25px;
+    background-color:#fff;
+    @include shadow(#111111);
+}
+header {
+    width: $site-width;
+    border-bottom: 1px solid $seperate-color;
+}
+
+#contents {
+    $gutter : 45px;
+    $border-size : 1px;
+    float: right;
+    width: $site-width - $site-aisde-width - $gutter;
+    padding-left: ceil($gutter/2 - $border-size);
+    margin-left: ceil($gutter/2 - $border-size);
+    margin-top:$spacer;
+    margin-bottom:$spacer;
+    border-left: $border-size solid $seperate-color;
+}
+
+aside {
+    float: left;
+    width: $site-aisde-width;
+    margin:$spacer 0 $spacer 0;
+}
+
+hr {
+    clear: both;
+}
+
+footer {
+    width: $site-width;
+}
+/* title */
+h1 {
+    span{
+
+    }
+}
