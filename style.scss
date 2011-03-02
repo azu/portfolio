@@ -31,6 +31,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color')";
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color');
 }
+
 $site-width : 950px;
 $site-aisde-width : 200px;
 $seperate-color: #eee;
@@ -51,7 +52,7 @@ body {
 #page{
     width: $site-width;
     margin: 0 auto;
-    height:100%;
+    height: auto;
     padding:0 25px;
     background-color:#fff;
     @include shadow(#111111);
@@ -72,7 +73,12 @@ header {
     margin-bottom:$spacer;
     border-left: $border-size solid $seperate-color;
 }
-
+article{
+    padding:5px 3px;
+    p {
+        line-height: 1.5;
+    }
+}
 aside {
     float: left;
     width: $site-aisde-width;
