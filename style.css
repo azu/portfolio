@@ -7,6 +7,9 @@ html, body {
   margin: 0;
   padding: 0; }
 
+a img {
+  border-style: none; }
+
 body {
   margin: 0 auto;
   background-repeat: no-repeat;
@@ -47,6 +50,9 @@ nav > ul.nav-roll {
     border-left: solid 1px #FFF; }
     nav > ul.nav-roll li.nav-site a {
       display: block; }
+    nav > ul.nav-roll li.nav-site img {
+      width: 140px;
+      height: 100px; }
   nav > ul.nav-roll:before, nav > ul.nav-roll:after {
     display: block;
     height: 0;

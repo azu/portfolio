@@ -45,6 +45,9 @@ html,body {
     margin:0;
     padding:0;
 }
+a img {
+    border-style:none;
+}
 body {
     margin: 0 auto;
     @include stripe(100% ,rgba(blue, 0.3), rgba(blue, 0));
@@ -72,6 +75,10 @@ nav > ul.nav-roll{
         border-left: solid 1px #FFF;
         a {
             display: block;
+        }
+        img{
+            width :140px;
+            height: 100px
         }
     }
     @include clearfix;
