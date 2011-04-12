@@ -14,7 +14,7 @@ body {
   -moz-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, transparent), color-stop(0.5, rgba(0, 0, 255, 0.3)), to(rgba(0, 0, 255, 0)));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(0, 0, 255, 0.3)), to(rgba(0, 0, 255, 0)));
   background-image: -moz-linear-gradient(top, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0));
   background-image: -o-linear-gradient(top, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0));
   background-image: linear-gradient(top, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0)); }
@@ -34,6 +34,26 @@ body {
 header {
   width: 950px;
   border-bottom: 1px solid #eeeeee; }
+
+nav > ul.nav-roll {
+  width: 750px;
+  list-style: none;
+  zoom: 1; }
+  nav > ul.nav-roll li.nav-site {
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    border-right: solid 1px #000;
+    border-left: solid 1px #FFF; }
+    nav > ul.nav-roll li.nav-site a {
+      display: block; }
+  nav > ul.nav-roll:before, nav > ul.nav-roll:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  nav > ul.nav-roll:after {
+    clear: both; }
 
 #contents {
   float: right;
@@ -61,3 +81,5 @@ footer {
   width: 950px; }
 
 /* title */
+h1 span {
+  font-size: 14px; }

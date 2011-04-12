@@ -18,7 +18,7 @@
     -moz-background-size:$width;
     -o-background-size:$width;
     background-size:$width;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, $s_rgba), to($e_rgba));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%,  color-stop(.5, $s_rgba), to($e_rgba));
     background-image: -moz-linear-gradient(top , $s_rgba, $e_rgba);
     background-image: -o-linear-gradient(top , $s_rgba, $e_rgba);
     background-image: linear-gradient(top , $s_rgba, $e_rgba);
@@ -61,7 +61,21 @@ header {
     width: $site-width;
     border-bottom: 1px solid $seperate-color;
 }
-
+nav > ul.nav-roll{
+    width: $site-width - $site-aisde-width;
+    list-style: none;
+    li.nav-site {
+        float: left;
+        text-align: center;
+        font-weight: bold;
+        border-right: solid 1px #000;
+        border-left: solid 1px #FFF;
+        a {
+            display: block;
+        }
+    }
+    @include clearfix;
+}
 #contents {
     $gutter : 45px;
     $border-size : 1px;
@@ -95,6 +109,6 @@ footer {
 /* title */
 h1 {
     span{
-
+        font-size:14px;
     }
 }
