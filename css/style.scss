@@ -1,45 +1,11 @@
-@mixin clearfix {
-    zoom: 1;
-
-    &:before,
-    &:after {
-        display: block;
-        height: 0;
-        visibility: hidden;
-        content: "\0020";
-    }
-    &:after {
-        clear: both;
-    }
-}
-@mixin stripe($width, $s_rgba, $e_rgba){
-    background-repeat:  no-repeat;
-    -webkit-background-size:$width;
-    -moz-background-size:$width;
-    -o-background-size:$width;
-    background-size:$width;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%,  color-stop(.5, $s_rgba), to($e_rgba));
-    background-image: -moz-linear-gradient(top , $s_rgba, $e_rgba);
-    background-image: -o-linear-gradient(top , $s_rgba, $e_rgba);
-    background-image: linear-gradient(top , $s_rgba, $e_rgba);
-
-}
-@mixin shadow($color: #333333) {
-  -moz-box-shadow: 0px 1px 2px $color;
-  -webkit-box-shadow: 0px 1px 2px $color;
-  box-shadow: 0px 1px 2px $color;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color');
-}
-
+@import "mixin.scss";
 $site-width : 950px;
 $site-aisde-width : 200px;
 $seperate-color: #eee;
 $spacer : 10px;
+
 html,body {
     height:100%;
-    margin:0;
-    padding:0;
 }
 *{
     margin:0;
@@ -73,6 +39,9 @@ nav > ul.nav-roll{
         font-weight: bold;
         border-right: solid 1px #000;
         border-left: solid 1px #FFF;
+        &:first-child {
+                border-left: solid 1px #000;
+        }
         a {
             display: block;
         }
@@ -93,17 +62,36 @@ nav > ul.nav-roll{
     margin-top:$spacer;
     margin-bottom:$spacer;
     border-left: $border-size solid $seperate-color;
+    p{
+        line-height:1.5;
+    }
 }
-article{
-    padding:5px 3px;
-    p {
-        line-height: 1.5;
+.sites {
+    margin-top: 10px;
+    border-top: 1px solid #EEEEEE;
+    h1 {
+        line-height: 1.2;
+        padding-left:10px;
+        border-left: 4px solid #111;
+    }
+    .screenshots {
+        text-align:center;
     }
 }
 aside {
     float: left;
     width: $site-aisde-width;
     margin:$spacer 0 $spacer 0;
+    ul.side-menu li{
+        a{
+            display: block;
+            padding:10px 5px;
+        }
+        list-style:none;
+        margin-bottom: 2px;
+        border-top: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+    }
 }
 
 hr {
@@ -112,10 +100,4 @@ hr {
 
 footer {
     width: $site-width;
-}
-/* title */
-h1 {
-    span{
-        font-size:14px;
-    }
 }

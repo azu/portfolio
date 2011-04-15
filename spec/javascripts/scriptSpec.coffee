@@ -7,9 +7,9 @@ $ ->
             describe "port.getSiteInfoが取得成功した場合", ->
                 beforeEach ->
                     jasmine.getFixtures().load('sites.html') # 対象ページ
-                    @sites = port.getSiteInfo('.sites')
+                    @sites = port.getSiteInfo('#contents > article')
                 it "articleを取得ができる", ->
-                    expect($(@sites).size()).toBeGreaterThan(0)
+                    expect($.isEmptyObject(@sites)).toBeFalsy()
                 it "タイトルが定義されている" ,->
                     $.each @sites, (key, value) ->
                         expect(value.title).toBeDefined()
@@ -23,7 +23,7 @@ $ ->
                 #spyOn(window.console, "log") if window.console?.log
                 it "falseを返す", ->
                    sandbox(); # sanboxに変える
-                   @sites = port.getSiteInfo('.sites') # 情報取得
+                   @sites = port.getSiteInfo('#contents > article') # 情報取得
                    expect(@sites).toBeFalsy()
         describe "Nav要素", ->
             data =
@@ -36,5 +36,8 @@ $ ->
                 @nav = port.createNav(data)
             it "createNavはdataを元にNav要素を作成できる" ,->
                 expect($(@nav)).toExist()
-            it "Nav要素にはli毎にサイト情報が並べられる" ,->
-            it "Nav要素を挿入できる", ->
+            it "insertNavはNav要素を挿入できる", ->
+                jasmine.getFixtures().load('sites.html') # 対象ページ
+                ref = $('#contents')
+                ref.prepend(@nav)
+                expect($('.nav-roll')).toExist()
