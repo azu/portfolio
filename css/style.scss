@@ -39,10 +39,7 @@ nav{
             text-align: center;
             font-weight: bold;
             border-right: solid 1px #000;
-            border-left: solid 1px #FFF;
-            &:first-child {
-                    border-left: solid 1px #000;
-            }
+            border-left: solid 1px #000;
             a {
                 display: block;
             }

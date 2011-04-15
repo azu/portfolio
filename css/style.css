@@ -47,9 +47,7 @@ nav ul.nav-roll {
     text-align: center;
     font-weight: bold;
     border-right: solid 1px #000;
-    border-left: solid 1px #FFF; }
-    nav ul.nav-roll li.nav-site:first-child {
-      border-left: solid 1px #000; }
+    border-left: solid 1px #000; }
     nav ul.nav-roll li.nav-site a {
       display: block; }
     nav ul.nav-roll li.nav-site img {
