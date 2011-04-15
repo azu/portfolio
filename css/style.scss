@@ -5,7 +5,7 @@ $seperate-color: #eee;
 $spacer : 10px;
 
 html,body {
-    height:100%;
+    @include min-height(100%);
 }
 *{
     margin:0;
@@ -16,7 +16,7 @@ a img {
 }
 body {
     margin: 0 auto;
-    @include stripe(100% ,rgba(blue, 0.3), rgba(blue, 0));
+    @include stripe(100% ,rgba(#6699CC, 0.3), rgba(blue, 0.1));
 }
 #page{
     width: $site-width;
@@ -30,27 +30,29 @@ header {
     width: $site-width;
     border-bottom: 1px solid $seperate-color;
 }
-nav > ul.nav-roll{
-    width: $site-width - $site-aisde-width;
-    list-style: none;
-    li.nav-site {
-        float: left;
-        text-align: center;
-        font-weight: bold;
-        border-right: solid 1px #000;
-        border-left: solid 1px #FFF;
-        &:first-child {
-                border-left: solid 1px #000;
+nav{
+    ul.nav-roll{
+        width: $site-width - $site-aisde-width - 25;
+        list-style: none;
+        li.nav-site {
+            float: left;
+            text-align: center;
+            font-weight: bold;
+            border-right: solid 1px #000;
+            border-left: solid 1px #FFF;
+            &:first-child {
+                    border-left: solid 1px #000;
+            }
+            a {
+                display: block;
+            }
+            img{
+                width :140px;
+                height: 100px
+            }
         }
-        a {
-            display: block;
-        }
-        img{
-            width :140px;
-            height: 100px
-        }
+        @include clearfix;
     }
-    @include clearfix;
 }
 #contents {
     $gutter : 45px;
@@ -64,6 +66,13 @@ nav > ul.nav-roll{
     border-left: $border-size solid $seperate-color;
     p{
         line-height:1.5;
+    }
+    .site-description, .description{
+            background-color: #e3ffa6;
+        font-size: 1em;
+        margin: 5px;
+        padding: 10px 10px 10px 15px;
+        text-align: left;
     }
 }
 .sites {
