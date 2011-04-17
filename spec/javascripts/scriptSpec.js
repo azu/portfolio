@@ -1,3 +1,4 @@
+//noinspection ThisExpressionReferencesGlobalObjectJS
 (function() {
   $(function() {
     jasmine.getFixtures().fixturesPath = '/';
