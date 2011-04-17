@@ -1,3 +1,4 @@
+@charset "utf-8";// 無いと日本語扱えない
 @import "mixin.scss";
 $site-width : 950px;
 $site-aisde-width : 200px;
@@ -23,12 +24,50 @@ body {
     margin: 0 auto;
     height: auto;
     padding:0 25px;
+    position: relative;// for absolute elements like #github batch
     background-color:#fff;
     @include shadow(#111111);
 }
 header {
     width: $site-width;
     border-bottom: 1px solid $seperate-color;
+    /* http://www.hagenburger.net/ */
+    #github-batch {
+        $width : 250px;
+        position: absolute;
+        right: -40px;
+        height: 30px;
+        top: 50px;
+        text-decoration: none;
+        width: $width;
+        @include rotate(40deg);
+        span {
+            background: black;
+            color: white;
+            font-size: 16px;
+            right: 0;
+            padding: 5px 0;
+            position: absolute;
+            text-align: center;
+            width: $width;
+            @include box-shadow(rgba(black, 0.2));
+            @include transition(opacity, 0.5s);
+            z-index:1;
+            &:last-child {
+              /* this is the backside */
+                background: #ff6600;
+                opacity: 0;
+            }
+        }
+        &:hover span {
+            &:first-child {
+              opacity: 0;
+            }
+            &:last-child {
+              opacity: 1;
+            }
+        }
+    }
 }
 nav{
     ul.nav-roll{

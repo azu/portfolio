@@ -43,3 +43,25 @@
     -ms-border-radius:$width;
     border-radius:$width;
 }
+@mixin rotate($angle){
+  -moz-transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  -o-transform: rotate($angle);
+  transform: rotate($angle);
+}
+@mixin box-shadow($rgba){
+    -moz-box-shadow: $rgba 1px 1px 10px 1px 1px 5px 0;
+    -webkit-box-shadow: $rgba 1px 1px 10px 1px 1px 5px 0;
+    -o-box-shadow: $rgba 1px 1px 10px 1px 1px 5px 0;
+    box-shadow: $rgba 1px 1px 10px 1px 1px 5px 0;
+}
+@mixin transition($opacity , $sec){
+    -moz-transition-property: $opacity;
+    -webkit-transition-property: $opacity;
+    -o-transition-property: $opacity;
+    transition-property: $opacity;
+    -moz-transition-duration: $sec;
+    -webkit-transition-duration: $sec;
+    -o-transition-duration: $sec;
+    transition-duration: $sec;
+}
