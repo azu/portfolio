@@ -43,13 +43,18 @@ header {
     position: absolute;
     right: -40px;
     height: 30px;
-    top: 50px;
+    top: 30px;
     text-decoration: none;
     width: 250px;
-    -moz-transform: rotate(40deg);
-    -webkit-transform: rotate(40deg);
-    -o-transform: rotate(40deg);
-    transform: rotate(40deg); }
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+    -moz-box-shadow: 0px 1px 2px black;
+    -webkit-box-shadow: 0px 1px 2px black;
+    box-shadow: 0px 1px 2px black;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color'); }
     header #github-batch span {
       background: black;
       color: white;
@@ -90,7 +95,9 @@ nav ul.nav-roll {
     text-align: center;
     font-weight: bold;
     border-right: solid 1px #000;
-    border-left: solid 1px #000; }
+    padding: 1px; }
+    nav ul.nav-roll li.nav-site:first-child {
+      border-left: solid 1px #000; }
     nav ul.nav-roll li.nav-site a {
       display: block; }
     nav ul.nav-roll li.nav-site img {
@@ -114,22 +121,21 @@ nav ul.nav-roll {
   border-left: 1px solid #eeeeee; }
   #contents p {
     line-height: 1.5; }
+  #contents .sites, #contents .products {
+    margin-top: 10px;
+    border-top: 1px solid #EEEEEE; }
+    #contents .sites h1, #contents .products h1 {
+      line-height: 1.2;
+      padding-left: 10px;
+      border-left: 4px solid #111; }
+  #contents .screenshots img {
+    max-width: 705px; }
   #contents .site-description, #contents .description {
     background-color: #e3ffa6;
     font-size: 1em;
     margin: 5px;
     padding: 10px 10px 10px 15px;
     text-align: left; }
-
-.sites {
-  margin-top: 10px;
-  border-top: 1px solid #EEEEEE; }
-  .sites h1 {
-    line-height: 1.2;
-    padding-left: 10px;
-    border-left: 4px solid #111; }
-  .sites .screenshots {
-    text-align: center; }
 
 aside {
   float: left;
