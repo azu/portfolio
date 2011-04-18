@@ -4,6 +4,7 @@ $site-width : 950px;
 $site-aisde-width : 200px;
 $seperate-color: #eee;
 $spacer : 10px;
+@import "timeline.scss";
 
 html,body {
     @include min-height(100%);
@@ -70,6 +71,7 @@ header {
         }
     }
 }
+
 nav{
     ul.nav-roll{
         width: $site-width - $site-aisde-width - 25;
@@ -109,7 +111,7 @@ nav{
     }
     .sites,.products {
         margin-top: 10px;
-        border-top: 1px solid #EEEEEE;
+        border-top: 1px solid $seperate-color;
         h1 {
             line-height: 1.2;
             padding-left:10px;
@@ -127,7 +129,6 @@ nav{
         text-align: left;
     }
 
-
 }
 aside {
     float: left;
@@ -140,8 +141,8 @@ aside {
         }
         list-style:none;
         margin-bottom: 2px;
-        border-top: 1px solid #EEEEEE;
-        border-bottom: 1px solid #EEEEEE;
+        border-top: 1px solid $seperate-color;
+        border-bottom: 1px solid $seperate-color;
     }
 }
 
