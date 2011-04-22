@@ -1,5 +1,6 @@
 @charset "utf-8";// 無いと日本語扱えない
 @import "mixin.scss";
+@import "css3-sass-mixins/_all.scss";
 $site-width : 950px;
 $site-aisde-width : 200px;
 $seperate-color: #eee;
@@ -27,7 +28,7 @@ body {
     padding:0 25px;
     position: relative;// for absolute elements like #github batch
     background-color:#fff;
-    @include shadow(#111111);
+    @include box-shadow(1px, 1px, 3px, #333);
 }
 header {
     width: $site-width;
@@ -41,19 +42,19 @@ header {
         top: 30px;
         text-decoration: none;
         width: $width;
-        @include rotate(5deg);
-        @include shadow(#000);
+        @include rotate(10deg);
+        @include box-shadow(0px, 1px, 2px, #000, 0);
         span {
             background: black;
             color: white;
             font-size: 16px;
             right: 0;
-            padding: 5px 0;
+            padding: 7px 0;
             position: absolute;
             text-align: center;
             width: $width;
-            @include box-shadow(rgba(black, 0.2));
-            @include transition(opacity, 0.5s);
+            @include box-shadow(2px, 2px, 5px, #111, 0);
+            @include transition(opacity 0.5s);
             z-index:1;
             &:last-child {
               /* this is the backside */
@@ -127,6 +128,10 @@ nav{
         margin: 5px;
         padding: 10px 10px 10px 15px;
         text-align: left;
+    }
+    .mail-form{
+        padding: 5px 10px;
+        border: none;
     }
 
 }

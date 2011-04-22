@@ -86,7 +86,7 @@
   font-family: Calibri, sans-serif; }
 
 #timeline li:hover {
-  background: #ff9933; }
+  background: #feac5a; }
 
 html, body {
   min-height: 100%;
@@ -119,11 +119,12 @@ body {
   padding: 0 25px;
   position: relative;
   background-color: #fff;
-  -moz-box-shadow: 0px 1px 2px #111111;
-  -webkit-box-shadow: 0px 1px 2px #111111;
-  box-shadow: 0px 1px 2px #111111;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color'); }
+  -moz-box-shadow: 1px 1px 3px #333333;
+  -o-box-shadow: 1px 1px 3px #333333;
+  -webkit-box-shadow: 1px 1px 3px #333333;
+  box-shadow: 1px 1px 3px #333333;
+  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1px, OffY=1px, Color='#515151');
+  -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=1px, OffY=1px, Color='#515151')"; }
 
 header {
   width: 950px;
@@ -136,36 +137,31 @@ header {
     top: 30px;
     text-decoration: none;
     width: 250px;
-    -moz-transform: rotate(5deg);
-    -webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    transform: rotate(5deg);
+    -moz-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
     -moz-box-shadow: 0px 1px 2px black;
+    -o-box-shadow: 0px 1px 2px black;
     -webkit-box-shadow: 0px 1px 2px black;
-    box-shadow: 0px 1px 2px black;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$color'); }
+    box-shadow: 0px 1px 2px black; }
     header #github-batch span {
       background: black;
       color: white;
       font-size: 16px;
       right: 0;
-      padding: 5px 0;
+      padding: 7px 0;
       position: absolute;
       text-align: center;
       width: 250px;
-      -moz-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 1px 1px 5px 0;
-      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 1px 1px 5px 0;
-      -o-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 1px 1px 5px 0;
-      box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 1px 1px 5px 0;
-      -moz-transition-property: opacity;
-      -webkit-transition-property: opacity;
-      -o-transition-property: opacity;
-      transition-property: opacity;
-      -moz-transition-duration: 0.5s;
-      -webkit-transition-duration: 0.5s;
-      -o-transition-duration: 0.5s;
-      transition-duration: 0.5s;
+      -moz-box-shadow: 2px 2px 5px #111111;
+      -o-box-shadow: 2px 2px 5px #111111;
+      -webkit-box-shadow: 2px 2px 5px #111111;
+      box-shadow: 2px 2px 5px #111111;
+      -moz-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s;
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s;
       z-index: 1; }
       header #github-batch span:last-child {
         /* this is the backside */
@@ -226,6 +222,9 @@ nav ul.nav-roll {
     margin: 5px;
     padding: 10px 10px 10px 15px;
     text-align: left; }
+  #contents .mail-form {
+    padding: 5px 10px;
+    border: none; }
 
 aside {
   float: left;
